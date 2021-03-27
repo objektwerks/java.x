@@ -1,0 +1,6 @@
+[ todo ]
+spring security
+
+[ ui ]
+
+new, edit, list, select, remove : student | school | year | course | teacher | assignment

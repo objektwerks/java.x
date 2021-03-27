@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ping:Ping xmlns:ping="http://javawerks/ping">
+    <value>ping</value>
+</ping:Ping>

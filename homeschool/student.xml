@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:student id="1" version="1" xmlns:ns2="http://homschool/schema/v1_0/student">
+    <name>Homer Simpson</name>
+    <grade id="1" version="1" year="1" start="2013-03-11T17:20:08.423-04:00" end="2013-09-07T17:20:08.423-04:00">
+        <school id="1" version="0">
+            <name>Slippery Rock</name>
+        </school>
+        <course id="1" version="1">
+            <name>Astro Physics</name>
+            <assignment id="1" version="0" assigned="2013-03-11T17:20:08.475-04:00" type="Standard" score="0">
+                <teacher id="1" version="0">
+                    <name>Albert Einstein</name>
+                </teacher>
+                <description>Explain the big bang theory.</description>
+            </assignment>
+        </course>
+    </grade>
+</ns2:student>

@@ -1,0 +1,22 @@
+<ehcache>
+    <diskStore path="user.home/.homeschool"/>
+    <defaultCache
+            maxElementsInMemory="1000"
+            eternal="false"
+            timeToIdleSeconds="43200"
+            timeToLiveSeconds="43200"
+            overflowToDisk="true"
+            maxElementsOnDisk="10000"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU"
+            />
+    <cache
+            name="homeschool.entity.Teacher"
+            maxElementsInMemory="100"
+            eternal="false"
+            timeToIdleSeconds="43200"
+            timeToLiveSeconds="43200"
+            overflowToDisk="false"
+            />
+</ehcache>

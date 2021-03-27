@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+    <context:component-scan base-package="persistence.jpa"/>
+    <context:property-placeholder location="test.properties"/>
+    <context:spring-configured/>
+    
+    <aop:aspectj-autoproxy/>
+    <bean class="persistence.jpa.LoggerAspect"/>
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="${db.driver}"/>
+        <property name="username" value="${db.username}"/>
+        <property name="password" value="${db.password}"/>
+        <property name="url" value="${db.url}"/>
+        <property name="initialSize" value="${db.initial.size}"/>
+        <property name="maxActive" value="${db.max.active}"/>
+    </bean>
+
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="persistenceUnitName" value="${persistence.unit.name}"/>
+        <property name="dataSource" ref="dataSource"/>
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
+        </property>
+        <property name="jpaPropertyMap">
+            <map>
+                <entry key="hibernate.connection.autocommit" value="${hibernate.autocommit}"/>
+                <entry key="hibernate.hbm2ddl.auto" value="${hibernate.hbm2ddl.auto}"/>
+                <entry key="hibernate.dialect" value="${hibernate.dialect}"/>
+                <entry key="hibernate.jdbc.batch_size" value="${hibernate.jdbc.batch.size}"/>
+                <entry key="hibernate.show_sql" value="${hibernate.show.sql}"/>
+                <entry key="hibernate.default_schema" value="${hibernate.default.schema}"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="jpaTemplate"
+          class="org.springframework.orm.jpa.JpaTemplate">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+    <bean id="entityManager" class="persistence.jpa.JpaGenericEntityManager">
+        <property name="jpaTemplate" ref="jpaTemplate"/>
+    </bean>
+
+    <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+
+    <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"/>
+
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    
+    <tx:annotation-driven transaction-manager="transactionManager" mode="aspectj"/>
+</beans>

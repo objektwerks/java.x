@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:amq="http://activemq.apache.org/schema/core"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core-5.1.0.xsd">
+
+    <amq:broker id="broker"
+                dataDirectory="./target/activemq"
+                useJmx="false"
+                persistent="false">
+        <amq:transportConnectors>
+            <amq:transportConnector uri="vm://localhost"/>
+        </amq:transportConnectors>
+    </amq:broker>
+
+    <bean id="jmsConnectionFactory"
+          class="org.apache.activemq.spring.ActiveMQConnectionFactory"
+          depends-on="broker">
+        <property name="brokerURL" value="vm://localhost"/>
+    </bean>
+
+    <bean id="sourceDestination"
+          class="org.apache.activemq.command.ActiveMQQueue"
+          depends-on="jmsConnectionFactory">
+        <constructor-arg index="0" value="source.destination"/>
+    </bean>
+
+    <bean id="targetDestination"
+          class="org.apache.activemq.command.ActiveMQQueue"
+          depends-on="jmsConnectionFactory">
+        <constructor-arg index="0" value="target.destination"/>
+    </bean>
+
+    <bean id="sourceJmsTemplate"
+          class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory" ref="jmsConnectionFactory"/>
+        <property name="defaultDestination" ref="sourceDestination"/>
+        <property name="receiveTimeout" value="1000"/>
+    </bean>
+
+    <bean id="targetJmsTemplate"
+          class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory" ref="jmsConnectionFactory"/>
+        <property name="defaultDestination" ref="targetDestination"/>
+        <property name="receiveTimeout" value="1000"/>
+    </bean>
+
+    <bean id="messageSelector"
+          class="jms.MessageSelector"
+          factory-method="jmsTimestampLessThanEqualDateTime"/>
+    
+    <bean id="pooledMessageTransferer"
+          class="jms.PooledMessageTransferer">
+        <constructor-arg index="0" ref="sourceJmsTemplate"/>
+        <constructor-arg index="1" ref="targetJmsTemplate"/>
+        <property name="corePoolSize" value="3"/>
+        <property name="maxPoolSize" value="6"/>
+        <property name="queueSize" value="6"/>
+        <property name="messageSelector" ref="messageSelector"/>
+    </bean>
+</beans>
