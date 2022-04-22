@@ -19,7 +19,7 @@ Learn Java
 8. Maintain all Java project work in one or more Github repositories as required.
 9. Learn [Maven](https://maven.apache.org/) and [Gradle](https://gradle.org/) build tools.
 
->Additionally, or alternatively, [Intellij Community Edition](https://www.jetbrains.com/idea/download/#section=mac)
+>Additionally [Intellij Community Edition](https://www.jetbrains.com/idea/download/#section=mac)
 >can be downloaded and installed. I recommend using both IDEs, given their popularity in the Java space.
 
 >***Always keep it simple!*** ***And never forget Murphy's law!***
