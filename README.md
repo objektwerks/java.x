@@ -4,7 +4,7 @@ Java
 
 Maven
 -----
->This is ***not*** a multi-module Maven project. Instead, it's a collection of random discrete Java projects.
+>This is ***not*** a multi-module Maven project. Instead, it's a collection of selected discrete Java projects.
 
 Learn Java
 ----------
