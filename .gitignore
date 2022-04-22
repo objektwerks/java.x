@@ -4,7 +4,14 @@ workspace.iml
 *.jar
 *.war
 *.ear
-hs_err_pid*
+/aop/aop.iml
+/hibernate/hibernate.iml
+/homeschool/homeschool.iml
+/jaxb/jaxb.iml
+/jms/jms.iml
+/jpa/jpa.iml
+/model/model.iml
+/xml/xml.iml
 /jaxb/src/main/main.iml
 /hibernate/src/main/main1.iml
 /model/src/main/main2.iml
