@@ -21,4 +21,4 @@ Learn Java
 >Additionally, or alternatively, [Intellij Community Edition](https://www.jetbrains.com/idea/download/#section=mac)
 >can be downloaded and installed. I recommend using both IDEs, given their popularity in the Java space.
 
->***Always keep it simple!***
+>***Always keep it simple!*** ***And never forget Murphy's law!***
