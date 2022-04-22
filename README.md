@@ -4,7 +4,7 @@ Java
 
 Maven
 -----
->This is **not** a multi-module Maven project. Instead, it's a collection of random discrete Java projects.
+>This is ***not*** a multi-module Maven project. Instead, it's a collection of random discrete Java projects.
 
 Learn Java
 ----------
@@ -17,3 +17,6 @@ Learn Java
 6. View short VS Code video tutorial ( https://code.visualstudio.com/learn/get-started/basics ).
 7. Start learning Java with [Learn Java Tutorial](https://www.codecademy.com/learn/learn-java).
 8. Maintain all Java project work in one or more Github repositories as required.
+
+>Additionally, or alternatively, [Intellij Community Edition](https://www.jetbrains.com/idea/download/#section=mac)
+>can be downloaded and installed. I recommend using both IDEs, given their popularity in the Java space.
