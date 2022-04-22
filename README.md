@@ -12,4 +12,4 @@ Learn Java
 5. Install VS Code Java Extension Pack (https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).
 6. View short VS Code video tutorial ( https://code.visualstudio.com/learn/get-started/basics ).
 7. Start leaning Java with [Learn Java Tutorial](https://www.codecademy.com/learn/learn-java).
-8. Maintain all of your Java project work in one or more Github repositories.
+8. Maintain all of your Java project work in one or more Github repositories as required.
