@@ -9,7 +9,9 @@ Learn Java
 2. Learn Git basics ( https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/ ).
 3. Download and install Java JDK 17 ( https://www.oracle.com/java/technologies/downloads/#java17 ).
 5. Download and install Visual Studio (VS) Code ( https://code.visualstudio.com/download ).
-6. View short VS Code video tutorial ( https://code.visualstudio.com/learn/get-started/basics ).
-7. Install VS Code, Language Support for Java, by Red Hat extension (https://marketplace.visualstudio.com/items?itemName=redhat.java).
+6. Install VS Code, Language Support for Java, by Red Hat extension (https://marketplace.visualstudio.com/items?itemName=redhat.java). **
+7. View short VS Code video tutorial ( https://code.visualstudio.com/learn/get-started/basics ).
 8. Start leaning Java with [Learn Java Tutorial](https://www.codecademy.com/learn/learn-java).
 9. Maintain all Java work in one or more Github repositories.
+
+>** Note: Consider replacing step 6 with this process: https://code.visualstudio.com/docs/java/java-tutorial which explains the installation process and installs additional Java extensions to VS Code.
