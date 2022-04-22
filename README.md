@@ -8,7 +8,7 @@ Maven
 
 Learn Java
 ----------
->Random thoughts on how to learn Java.
+>Random thoughts on how to learn Java - from a guy who used Java for 16 years.
 1. Create a free Github account ( github.com ).
 2. Learn Git basics ( https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/ ).
 3. Download and install Java JDK 17 ( https://www.oracle.com/java/technologies/downloads/#java17 ).
@@ -20,3 +20,5 @@ Learn Java
 
 >Additionally, or alternatively, [Intellij Community Edition](https://www.jetbrains.com/idea/download/#section=mac)
 >can be downloaded and installed. I recommend using both IDEs, given their popularity in the Java space.
+
+>***Always keep it simple!***
