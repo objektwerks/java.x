@@ -15,7 +15,7 @@ Learn Java
 4. Download and install Visual Studio (VS) Code ( https://code.visualstudio.com/download ).
 5. Install VS Code Extension Pack for Java (https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).
 6. View short VS Code video tutorial ( https://code.visualstudio.com/learn/get-started/basics ).
-7. Start learning Java with free [Learn Java Tutorial](https://www.codecademy.com/learn/learn-java). After completion, you'll continue learning from all sources.
+7. Start learning Java with free [Learn Java Tutorial](https://www.codecademy.com/learn/learn-java). After completion, continue learning from all sources.
 8. Maintain all Java project work in one or more Github repositories as required.
 9. Learn [Maven](https://maven.apache.org/) and [Gradle](https://gradle.org/) build tools.
 
