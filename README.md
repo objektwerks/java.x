@@ -2,6 +2,10 @@ Java
 ----
 >Java projects using Java 8 and Spring 4 with a focus on aop, hibernate, jpa, jaxb, jms, quartz and xml.
 
+Maven
+-----
+>This is **not** a multi-module Maven project. Instead, it's a collection of random discrete Java projects.
+
 Learn Java
 ----------
 >Random thoughts on how to learn Java.
