@@ -21,6 +21,6 @@ Learn Java
 6. Maintain all Java project work in one or more Github repositories as required.
 
 >I recommend using both VS Code and Intellij, given their popularity in the Java space. Eventually you'll develop a
->preference for one IDE, but know both.
+>preference for one, but know both.
 
 >***Always keep it simple!*** ***And never forget Murphy's law!***
