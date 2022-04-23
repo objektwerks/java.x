@@ -4,6 +4,16 @@ workspace.iml
 *.jar
 *.war
 *.ear
+
+/aop/target
+/hibernate/target
+/homeschool/target
+/jaxb/target
+/jms/target
+/jpa/target
+/model/target
+/xml/target
+
 /aop/aop.iml
 /hibernate/hibernate.iml
 /homeschool/homeschool.iml
@@ -12,6 +22,7 @@ workspace.iml
 /jpa/jpa.iml
 /model/model.iml
 /xml/xml.iml
+
 /jaxb/src/main/main.iml
 /hibernate/src/main/main1.iml
 /model/src/main/main2.iml
