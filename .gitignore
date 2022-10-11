@@ -5,6 +5,7 @@ workspace.iml
 *.jar
 *.war
 *.ear
+.DS_Store
 
 /aop/target
 /hibernate/target
